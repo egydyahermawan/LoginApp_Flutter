@@ -21,7 +21,7 @@ masukkan pada form login:
 - Password: admin123
 
 ## Link Download Aplikasi
-Download Link: https://drive.google.com/file/d/1eSFwEIhH4mnxqtY9yoWIGZCF77lz6-ex/view?usp=sharing
+Download Link: https://drive.google.com/file/d/1BEgiWovBDy0PdfvAT8EEZy8NsZ4h1B91/view?usp=sharing
 
 ## Penutup
 Itulan aplikasi login sederhana dengan Flutter!
