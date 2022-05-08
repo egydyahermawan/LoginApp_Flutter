@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:login_app/check_login.dart';
+import 'package:login_app/screen/login_screen.dart';
 import 'package:login_app/screen/main_screen.dart';
-import 'package:login_app/screen/register_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreen createState() => _LoginScreen();
+  _RegisterScreen createState() => _RegisterScreen();
 }
 
-class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
+class _RegisterScreen extends State<RegisterScreen>
+    with SingleTickerProviderStateMixin {
   final _formKey = GlobalKey<FormState>();
   final _usernameControl = TextEditingController();
+  final _emailControl = TextEditingController();
   final _passwordControl = TextEditingController();
 
   AnimationController? animControl;
@@ -22,10 +24,9 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    animControl = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 800));
-    widthAnimation = Tween<double>(begin: 0, end: 86)
-        .animate(CurvedAnimation(parent: animControl!, curve: Curves.easeOut));
+    animControl =
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 850));
+    widthAnimation = Tween<double>(begin: 0, end: 64).animate(CurvedAnimation(parent: animControl!, curve: Curves.easeOut));
 
     animControl!.addListener(() {
       setState(() {});
@@ -37,6 +38,7 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
   @override
   void dispose() {
     _usernameControl.dispose();
+    _emailControl.dispose();
     _passwordControl.dispose();
     super.dispose();
   }
@@ -64,14 +66,15 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                   Stack(
                     children: [
                       Positioned(
-                          left: 12,
+                          bottom: 68,
+                          left: 136,
                           child: Container(
                             color: const Color(0xffFEC574),
                             height: 24,
                             width: widthAnimation!.value,
                           )),
                       const Text(
-                        'Hello,\nWelcome Back !',
+                        'Hello,\nCreate Your Account !',
                         style: TextStyle(
                             fontFamily: 'SourceSansPro',
                             fontSize: 48,
@@ -80,10 +83,10 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                       ),
                     ],
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(top: 8),
                     child: Text(
-                      'Please Sign In to continue',
+                      'Please fill the form below',
                       style: TextStyle(fontFamily: 'JosefinSlab', fontSize: 24),
                     ),
                   ),
@@ -97,26 +100,14 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 16,
                     ),
+                    buildInputForm(_emailControl, false, 'Email'),
+                    const SizedBox(
+                      height: 16,
+                    ),
                     buildInputForm(_passwordControl, true, 'Password'),
                     const SizedBox(
                       height: 16,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16),
-                          child: InkWell(
-                            onTap: () {},
-                            child: const Text(
-                              'Forgot Password?',
-                              style: TextStyle(
-                                  fontFamily: 'SourceSansPro', fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
                   ],
                 ),
               ),
@@ -145,32 +136,8 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 print('Validated');
-                                final doLogin = CheckLogin(
-                                    username: _usernameControl.text,
-                                    password: _passwordControl.text);
-                                if (doLogin.checkLoginData()) {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => MainScreen(
-                                                username: _usernameControl.text,
-                                                password: _passwordControl.text,
-                                              )));
-                                } else {
-                                  final loginFailedReport = SnackBar(
-                                    content: const Text(
-                                        'Username or Password is incorrect!'),
-                                    action: SnackBarAction(
-                                      label: 'Clear Form',
-                                      onPressed: () {
-                                        _usernameControl.clear();
-                                        _passwordControl.clear();
-                                      },
-                                    ),
-                                  );
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(loginFailedReport);
-                                }
+                              } else {
+                                print('Not Validated');
                               }
                             },
                             shape: RoundedRectangleBorder(
@@ -179,7 +146,7 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                                     width: 1, color: Color(0xff212121))),
                             elevation: 0,
                             child: const Text(
-                              'Sign In',
+                              'Sign Up',
                               style: TextStyle(
                                   fontFamily: 'SourceSansPro',
                                   fontSize: 24,
@@ -194,7 +161,7 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'Dont have an account?',
+                        'Already have an account?',
                         style:
                             TextStyle(fontFamily: 'JosefinSlab', fontSize: 18),
                       ),
@@ -205,11 +172,10 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen()));
+                                    builder: (context) => const LoginScreen()));
                           },
                           child: const Text(
-                            'Sign Up',
+                            'Sign In',
                             style: TextStyle(
                                 fontFamily: 'JosefinSlab',
                                 fontSize: 18,
@@ -259,11 +225,23 @@ class _LoginScreen extends State<LoginScreen> with TickerProviderStateMixin {
               borderSide: const BorderSide(width: 1, color: Colors.red),
             ),
           ),
-          validator: hintText == 'Username'
-              ? RequiredValidator(errorText: '- Username is required')
-              : MultiValidator([
-                  RequiredValidator(errorText: '- Password is required'),
-                  MinLengthValidator(8,
-                      errorText: '- Password must be least 8 digits long')
-                ]));
+          validator: MultiValidator(doValidate(hintText)));
+  List<FieldValidator<dynamic>> doValidate(String hintText) {
+    if (hintText == 'Username') {
+      return [RequiredValidator(errorText: '- Username is required')];
+    } else if (hintText == 'Email') {
+      return [
+        RequiredValidator(errorText: '- Email is required'),
+        EmailValidator(errorText: '- Enter a valid Email Address')
+      ];
+    } else if (hintText == 'Password') {
+      return [
+        RequiredValidator(errorText: '- Password is required'),
+        MinLengthValidator(8,
+            errorText: '- Password must be at least 8 digits long')
+      ];
+    } else {
+      return [];
+    }
+  }
 }
