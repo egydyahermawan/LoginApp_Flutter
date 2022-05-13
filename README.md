@@ -36,7 +36,7 @@ masukkan pada form login:
 - Password: admin123
 
 Selain itu pada form login dan juga registrasi terdapat validasi dengan aturan seperti berikut:
-#### Validasi Login
+#### - Validasi Login
 ![image](https://user-images.githubusercontent.com/85085226/168232480-5efafaaf-8456-43d7-87c0-24b6a125b0c5.png)
 - Username
   Harus mengisi Username: "Username is Required"
@@ -45,7 +45,7 @@ Selain itu pada form login dan juga registrasi terdapat validasi dengan aturan s
   Harus mengisi Password: "Password is Required"
   Panjang Password harus atau setidaknya 8 karakter: "Password must be at least 8 digits long"
 
-#### Validasi  Registrasi
+#### - Validasi  Registrasi
 ![image](https://user-images.githubusercontent.com/85085226/168232592-35efeb62-8098-4d69-8638-238147ab5cbc.png)
 - Username
   Harus mengisi Username: "Username is Required"
