@@ -10,7 +10,7 @@ dengan tampilan yang menarik dan juga cepat!
 
 Aplikasi ini terdiri dari beberapa tampilan yaitu:
 1. Splash Screen => tampilan awal saat aplikasi dibuka yang berlangsung beberapa detik
-![Screenshot_20220513-141230](https://user-images.githubusercontent.com/85085226/168231615-abf19fb7-e9e3-4ae3-8705-77e4e91f0e1f.jpg)
+<img src="https://user-images.githubusercontent.com/85085226/168231615-abf19fb7-e9e3-4ae3-8705-77e4e91f0e1f.jpg" width="250">
 
 2. OnBoarding Screen => tampilan yang biasanya digunakan untuk memperkenalkan aplikasi secara umum
 ![Screenshot_20220513-141236](https://user-images.githubusercontent.com/85085226/168231684-07f80473-d17e-4c47-93e4-61d658315c84.jpg)
