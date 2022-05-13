@@ -6,6 +6,7 @@ Lakukan login di aplikasi ini dan apabila berhasil, maka kamu berhasil login!
 Aplikasi ini dibangun menggunakan Flutter SDK untuk dapat berjalan di platform mobile 
 dengan tampilan yang menarik dan juga cepat!
 
+
 ## Getting Started
 
 Aplikasi ini terdiri dari beberapa tampilan yaitu:
@@ -13,17 +14,17 @@ Aplikasi ini terdiri dari beberapa tampilan yaitu:
 <img src="https://user-images.githubusercontent.com/85085226/168231615-abf19fb7-e9e3-4ae3-8705-77e4e91f0e1f.jpg" width="250">
 
 2. OnBoarding Screen => tampilan yang biasanya digunakan untuk memperkenalkan aplikasi secara umum
-![Screenshot_20220513-141236](https://user-images.githubusercontent.com/85085226/168231684-07f80473-d17e-4c47-93e4-61d658315c84.jpg)
-![Screenshot_20220513-141242](https://user-images.githubusercontent.com/85085226/168231645-e5de8eec-fde7-49df-b05e-5ebfcd14813b.jpg)
+<img src="https://user-images.githubusercontent.com/85085226/168231684-07f80473-d17e-4c47-93e4-61d658315c84.jpg" width="250">
+<img src="https://user-images.githubusercontent.com/85085226/168231645-e5de8eec-fde7-49df-b05e-5ebfcd14813b.jpg" width="250">
 
 3. Login Screen => tampilan berupa form untuk pengguna melakukan login
-![Screenshot_20220513-141252](https://user-images.githubusercontent.com/85085226/168231711-22b00dcb-1b57-4aa0-9e27-96264b099b0b.jpg)
+<img src="https://user-images.githubusercontent.com/85085226/168231711-22b00dcb-1b57-4aa0-9e27-96264b099b0b.jpg" width="250">
 
 4. Registration Screen => tampilan berupa form untuk pengguna melakukan registrasi
-![Screenshot_20220513-141253](https://user-images.githubusercontent.com/85085226/168231733-4b7241cb-5720-49d5-8af6-83ca3d842b20.jpg)
+<img src="https://user-images.githubusercontent.com/85085226/168231733-4b7241cb-5720-49d5-8af6-83ca3d842b20.jpg" width="250">
 
-6. Main Screen => tampilan saat pengguna berhasil login
-![Screenshot_20220513-141316](https://user-images.githubusercontent.com/85085226/168231749-f921d061-b7d0-4f20-8233-dfccfd8e4e21.jpg)
+5. Main Screen => tampilan saat pengguna berhasil login
+<img src="https://user-images.githubusercontent.com/85085226/168231749-f921d061-b7d0-4f20-8233-dfccfd8e4e21.jpg" width="250">
 
 
 ## Syarat Login
@@ -57,8 +58,10 @@ Selain itu pada form login dan juga registrasi terdapat validasi dengan aturan s
   Harus mengisi Password: "Password is Required"
   Panjang Password harus atau setidaknya 8 karakter: "Password must be at least 8 digits long"
   
+
 ## Link Download Aplikasi
 Download Link: https://drive.google.com/file/d/1BEgiWovBDy0PdfvAT8EEZy8NsZ4h1B91/view?usp=sharing
+
 
 ## Penutup
 Itulah aplikasi login sederhana dengan Flutter!
