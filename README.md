@@ -1,10 +1,10 @@
 # Login App
 
-Sebuah aplikasi login untuk mu!
-Lakukan login di aplikasi ini dan apabila berhasil, maka kamu berhasil login!
+Sebuah aplikasi login untuk mu! <br>
+Lakukan login di aplikasi ini dan apabila berhasil, maka kamu berhasil login! <br>
 
-Aplikasi ini dibangun menggunakan Flutter SDK untuk dapat berjalan di platform mobile 
-dengan tampilan yang menarik dan juga cepat!
+Aplikasi ini dibangun menggunakan Flutter SDK untuk dapat berjalan di platform mobile <br>
+dengan tampilan yang menarik dan juga cepat! 
 
 
 ## Getting Started
@@ -28,9 +28,9 @@ Aplikasi ini terdiri dari beberapa tampilan yaitu:
 
 
 ## Syarat Login
-Untuk bisa login dan mengakses Main Screen, pengguna harus memasukkan
-username dan password yang mana untuk saat ini username dan password 
-masih ditentukan. Berikut adalah username dan password yang harus pengguna
+Untuk bisa login dan mengakses Main Screen, pengguna harus memasukkan <br>
+username dan password yang mana untuk saat ini username dan password <br>
+masih ditentukan. Berikut adalah username dan password yang harus pengguna <br>
 masukkan pada form login:
 - Username: admin
 - Password: admin123
@@ -38,24 +38,24 @@ masukkan pada form login:
 Selain itu pada form login dan juga registrasi terdapat validasi dengan aturan seperti berikut:
 #### - Validasi Login
 ![image](https://user-images.githubusercontent.com/85085226/168232480-5efafaaf-8456-43d7-87c0-24b6a125b0c5.png)
-- Username
+- Username <br>
   Harus mengisi Username: "Username is Required"
   
-- Password
-  Harus mengisi Password: "Password is Required"
+- Password <br>
+  Harus mengisi Password: "Password is Required" <br>
   Panjang Password harus atau setidaknya 8 karakter: "Password must be at least 8 digits long"
 
 #### - Validasi  Registrasi
 ![image](https://user-images.githubusercontent.com/85085226/168232592-35efeb62-8098-4d69-8638-238147ab5cbc.png)
-- Username
+- Username <br>
   Harus mengisi Username: "Username is Required"
   
-- Email
-  Harus mengisi Email: "Email is Required"
+- Email <br>
+  Harus mengisi Email: "Email is Required" <br>
   Masukkan Email yang valid: "Enter a valid Email Address"
 
-- Password
-  Harus mengisi Password: "Password is Required"
+- Password <br>
+  Harus mengisi Password: "Password is Required" <br>
   Panjang Password harus atau setidaknya 8 karakter: "Password must be at least 8 digits long"
   
 
